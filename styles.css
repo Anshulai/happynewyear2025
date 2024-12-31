@@ -30,6 +30,7 @@ body {
 }
 
 .container {
+   
     max-width: 800px;
     width: 100%;
     margin: 2rem auto;
@@ -39,6 +40,8 @@ body {
 }
 
 .message-card {
+    overflow-y: auto;
+    max-height: 100vh;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     padding: 2rem;
@@ -210,5 +213,40 @@ textarea::placeholder {
     }
     100% {
         transform: translateY(0);
+    }
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Smaller font size for headings */
+    }
+
+    .message-display {
+        padding: 1rem; /* Reduce padding on smaller screens */
+        min-height: 150px; /* Adjust minimum height */
+    }
+
+    #displayText {
+        font-size: 18px; /* Smaller font size for text */
+        padding: 0 0.5rem; /* Reduce padding for text */
+    }
+
+    .romantic-btn {
+        padding: 0.5rem 1rem; /* Adjust button size */
+        font-size: 14px; /* Smaller button text */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Further reduce heading size for very small screens */
+    }
+
+    #displayText {
+        font-size: 16px; /* Smaller font size for very small screens */
+    }
+
+    .message-card {
+        padding: 1rem; /* Reduce padding for very small screens */
     }
 }
